@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +18,9 @@ namespace GameItems.Model.Games
     /// </summary>
     public class Comment
     {
+        [Key]
+        [JsonIgnore]
+        public int commentId { get; set; }
         public string user { get; set; }
         public string message { get; set; }
         public string dateCreated { get; set; }

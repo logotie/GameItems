@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,6 +24,9 @@ namespace GameItems.Model.Games
     /// </summary>
     public class Payload
     {
+        [JsonIgnore]
+        [Key]
+        public int payloadId { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public string by { get; set; }
