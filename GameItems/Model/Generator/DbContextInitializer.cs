@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameItems.Model.Generator
 {
-    public class DbContextInitiallizer
+    public class DbContextInitializer
     {
         //DbContext is the link between the database and my models.
         public static void Initialize(GameItemsContext dbContext)
