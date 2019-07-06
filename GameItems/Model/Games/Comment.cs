@@ -21,16 +21,9 @@ namespace GameItems.Model.Games
         [Key]
         [JsonIgnore]
         public int CommentId { get; set; }
-        [JsonProperty("user")]
         public string user { get; set; }
-
-        [JsonProperty("message")]
         public string message { get; set; }
-
-        [JsonProperty("dateCreated")]
         public string dateCreated { get; set; }
-
-        [JsonProperty("like")]
         public int like { get; set; }
     }
 }

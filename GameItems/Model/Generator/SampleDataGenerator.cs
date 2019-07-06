@@ -9,11 +9,17 @@ namespace GameItems.Model.Generator
 {
     public class SampleDataGenerator
     {
-        public static SampleData GenerateSampleGameData()
+        private readonly SampleData sampleData;
+
+        public SampleDataGenerator()
         {
             String sampleGamesJson = GameItems.Resource.SampleJsonData;
-            SampleData sampleData = JsonConvert.DeserializeObject<SampleData>(sampleGamesJson);
-            return sampleData;
+            sampleData = JsonConvert.DeserializeObject<SampleData>(sampleGamesJson);
+        }
+
+        public List<Game> GetAllGames()
+        {
+            return sampleData.games;
         }
     }
 }

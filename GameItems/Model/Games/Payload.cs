@@ -28,17 +28,13 @@ namespace GameItems.Model.Games
         [Key]
         [JsonIgnore]
         public int PayloadId { get; set; }
-        [JsonProperty("title")]
         public string title { get; set; }
 
-        [JsonProperty("description")]
         public string description { get; set; }
 
-        [JsonProperty("by")]
         public string by { get; set; }
 
         [NotMapped]
-        [JsonProperty("platform")]
         public IList<string> platform { get; set; }
 
         //We cannot store an arraylist of strings in the Db, so instead we convert
@@ -46,14 +42,11 @@ namespace GameItems.Model.Games
         [JsonIgnore]
         public string platformString { get; set; }
 
-        [JsonProperty("age_rating")]
         public string age_rating { get; set; }
 
-        [JsonProperty("likes")]
         public int likes { get; set; }
 
-        [JsonProperty("comments")]
-        public IList<Comment> comments { get; set; }
+        public List<Comment> comments { get; set; }
 
         public void AlterModelForDbStorage()
         {

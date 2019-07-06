@@ -13,7 +13,11 @@ namespace GameItems.Model.Generator
         {
             SampleData sampleGameData = SampleDataGenerator.GenerateSampleGameData();
 
+            //All Games
+            IList<Game> games = sampleGameData.games;
 
+            //All Payloads
+            IList<Comment> comments 
             //What does a db context do?
             dbContext.Database.EnsureCreated();
 
