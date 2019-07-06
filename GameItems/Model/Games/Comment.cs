@@ -18,12 +18,16 @@ namespace GameItems.Model.Games
     /// </summary>
     public class Comment
     {
-        [Key]
-        [JsonIgnore]
-        public int commentId { get; set; }
+        [JsonProperty("user")]
         public string user { get; set; }
+
+        [JsonProperty("message")]
         public string message { get; set; }
+
+        [JsonProperty("dateCreated")]
         public string dateCreated { get; set; }
+
+        [JsonProperty("like")]
         public int like { get; set; }
     }
 }

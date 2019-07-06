@@ -24,15 +24,25 @@ namespace GameItems.Model.Games
     /// </summary>
     public class Payload
     {
-        [JsonIgnore]
-        [Key]
-        public int payloadId { get; set; }
+        [JsonProperty("title")]
         public string title { get; set; }
+
+        [JsonProperty("description")]
         public string description { get; set; }
+
+        [JsonProperty("by")]
         public string by { get; set; }
-        public string[] platform { get; set; }
+
+        [JsonProperty("platform")]
+        public IList<string> platform { get; set; }
+
+        [JsonProperty("age_rating")]
         public string age_rating { get; set; }
+
+        [JsonProperty("likes")]
         public int likes { get; set; }
-        public Comment[] comment { get; set; }
+
+        [JsonProperty("comments")]
+        public IList<Comment> comments { get; set; }
     }
 }
