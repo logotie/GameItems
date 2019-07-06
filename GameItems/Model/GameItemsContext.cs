@@ -19,6 +19,9 @@ namespace GameItems.Model
 
         //DbSet collection of Game objects, similar to a table and rows.
         public DbSet<Game> Games { get; set; }
+        //Dbset collection of comments
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Payload> Payloads { get; set; }
 
     }
 }
