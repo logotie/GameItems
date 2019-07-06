@@ -21,7 +21,9 @@ namespace GameItems.Model.Generator
 
             Game sampleGameData = SampleDataGenerator.GenerateSampleGameData();
 
+            dbContext.Games.Add(sampleGameData);
 
+            dbContext.SaveChanges();
         }
 
     }
