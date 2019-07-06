@@ -8,6 +8,6 @@ namespace GameItems.Model.Games
 {
     public class SampleData
     {
-        public IList<Game> games { get; set; }
+        public List<Game> games { get; set; }
     }
 }

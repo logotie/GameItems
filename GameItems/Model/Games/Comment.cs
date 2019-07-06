@@ -20,7 +20,7 @@ namespace GameItems.Model.Games
     {
         [Key]
         [JsonIgnore]
-        public int CommentId { get; set; }
+        public string CommentId { get; set; }
         public string user { get; set; }
         public string message { get; set; }
         public string dateCreated { get; set; }

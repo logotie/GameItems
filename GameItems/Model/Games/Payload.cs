@@ -27,7 +27,7 @@ namespace GameItems.Model.Games
     {
         [Key]
         [JsonIgnore]
-        public int PayloadId { get; set; }
+        public string PayloadId { get; set; }
         public string title { get; set; }
 
         public string description { get; set; }
