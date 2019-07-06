@@ -41,6 +41,11 @@ namespace GameItems.Model.Games
         [JsonProperty("platform")]
         public IList<string> platform { get; set; }
 
+        //We cannot store an arraylist of strings in the Db, so instead we convert
+        //to a string and store it here.
+        [JsonIgnore]
+        public string platformString { get; set; }
+
         [JsonProperty("age_rating")]
         public string age_rating { get; set; }
 
@@ -49,5 +54,11 @@ namespace GameItems.Model.Games
 
         [JsonProperty("comments")]
         public IList<Comment> comments { get; set; }
+
+        public void AlterModelForDbStorage()
+        {
+            //Join all the strings together and store.
+            platformString = String.Join(",", platform.ToArray());
+        }
     }
 }
