@@ -30,6 +30,7 @@ namespace GameItems.Model.Games
         [Key]
         [JsonIgnore]
         public int id { get; set; }
+        [JsonProperty("value")]
         public Payload payload { get; set; }
     }
 }

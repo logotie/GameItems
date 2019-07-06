@@ -11,6 +11,9 @@ namespace GameItems.Model.Generator
         //DbContext is the link between the database and my models.
         public static void Initialize(GameItemsContext dbContext)
         {
+            Game sampleGameData = SampleDataGenerator.GenerateSampleGameData();
+
+
             //What does a db context do?
             dbContext.Database.EnsureCreated();
 
@@ -19,7 +22,6 @@ namespace GameItems.Model.Generator
                 return; //Test data has already been added.
             }
 
-            Game sampleGameData = SampleDataGenerator.GenerateSampleGameData();
 
             dbContext.Games.Add(sampleGameData);
 
