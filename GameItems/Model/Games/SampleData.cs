@@ -8,7 +8,6 @@ namespace GameItems.Model.Games
 {
     public class SampleData
     {
-        [JsonProperty("games")]
         public IList<Game> games { get; set; }
     }
 }
