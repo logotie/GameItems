@@ -5,6 +5,15 @@ using System.Threading.Tasks;
 
 namespace GameItems.Model.Games
 {
+    ///<summary>  
+    ///Model class for the Comment JSON
+    /// {
+    /// "user":"bob",
+    /// "message":"Cracking game far too much cinematic",
+    /// "dateCreated":"2011-01-03",
+    /// "like":6
+    /// }
+    /// </summary>
     public class Comment
     {
         public string user { get; set; }
