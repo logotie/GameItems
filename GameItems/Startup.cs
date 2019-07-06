@@ -32,6 +32,8 @@ namespace GameItems
             //Specifies also that it will use an in memory database
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //Dependency Injection for the GameRetrieval service, also handles injection of the Db Context
+            
+            //Scoped means that a new service will be created on each request 
             services.AddScoped<IGameRetrieval, GameRetrieval>();
         }
 
