@@ -9,8 +9,7 @@ namespace GameItems.Model.Generator
 {
     public class SampleDataGenerator
     {
-
-        public Game GenerateSampleGameData()
+        public static Game GenerateSampleGameData()
         {
             String sampleGamesJson = GameItems.Resource.SampleJsonData;
             Game sampleData = JsonConvert.DeserializeObject<Game>(sampleGamesJson);
